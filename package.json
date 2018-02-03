@@ -34,5 +34,11 @@
   "engines": {
     "node": ">= 4.0"
   },
-  "private": true
+  "private": true,
+  "dependencies": {
+    "glimmer-router": "0.0.1",
+    "history": "^4.7.2",
+    "path-to-regexp": "^2.1.0",
+    "route-recognizer": "^0.3.3"
+  }
 }

@@ -1,1 +1,264 @@
-<div><h1>Welcome to Glimmer!</h1></div>
+<!--<div><h1>Welcome to Glimmer!</h1></div>
+<h1>I am a child route</h1>
+
+<a onclick={{action linkTo}}>Visit Compose Component</a>
+
+<a onclick={{action linkToDynamic}}>Visit Dynamic Component (1234)</a>
+
+<a onclick={{action linkToDynamicFoo}}>Visit Dynamic Component (foo-bar-baz)</a>
+
+<a href="javascript:void(0);" onclick={{action linkToEmail}}>Visit Email</a>
+
+<section data-outlet="/emails"></section>-->
+<div class="en v4 ready">
+
+    <div class="page_wrap movie_wrap">
+
+        <header class="smaller">
+            <div class="content">
+                <div class="sub_media">
+
+                    <ul class="small right">
+                        <li><a href="https://www.themoviedb.org/apps?language=en">Apps</a></li>
+                        <li><a href="https://www.themoviedb.org/discuss?language=en">Forums</a></li>
+                        <li><a href="https://www.themoviedb.org/leaderboard?language=en">Leaderboard</a></li>
+                        <li><a href="https://www.themoviedb.org/contribute?language=en">Contribute</a></li>
+                        <li><a href="https://www.themoviedb.org/documentation/api?language=en">API</a></li>
+                        <li><a href="https://www.themoviedb.org/talk?language=en">Support</a></li>
+
+                    </ul>
+
+
+                    <div class="left">
+                        <ul class="primary">
+
+                            <li class="logo">
+                                <a href="https://www.themoviedb.org/?language=en">
+                                    <img src="./Popular Movies — The Movie Database (TMDb)_files/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" width="91" height="81">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://www.themoviedb.org/discover?language=en">Discover</a>
+                                <ul class="sub_menu discover hide">
+                                    <li><a href="https://www.themoviedb.org/discover/movie?language=en">Movies</a></li>
+                                    <li><a href="https://www.themoviedb.org/discover/tv?language=en">TV Shows</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick={{action linkToMovies}}>Movies</a>
+                                <ul class="sub_menu movie hide">
+                                    <li><a href="https://www.themoviedb.org/movie?language=en">Popular</a></li>
+                                    <li><a href="https://www.themoviedb.org/movie/top-rated?language=en">Top Rated</a></li>
+                                    <li><a href="https://www.themoviedb.org/movie/upcoming?language=en">Upcoming</a></li>
+                                    <li><a href="https://www.themoviedb.org/movie/now-playing?language=en">Now Playing</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="#" onclick={{action linkToTvshows}}>TV Shows</a>
+                                <ul class="sub_menu tv hide">
+                                    <li><a href="https://www.themoviedb.org/tv?language=en">Popular</a></li>
+                                    <li><a href="https://www.themoviedb.org/tv/top-rated?language=en">Top Rated</a></li>
+                                    <li><a href="https://www.themoviedb.org/tv/on-the-air?language=en">On TV</a></li>
+                                    <li><a href="https://www.themoviedb.org/tv/airing-today?language=en">Airing Today</a></li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="https://www.themoviedb.org/person?language=en">People</a>
+                                <ul class="sub_menu person hide">
+                                    <li><a href="https://www.themoviedb.org/person?language=en">Popular People</a></li>
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </div>
+
+
+                    <div class="right">
+                        <ul class="primary">
+                            <li>
+                                <div class="glyph_wrapper">
+                                    <a class="glyph new_icon no_click" href="https://www.themoviedb.org/movie?language=en#">
+                                        <span class="glyphicons glyphicons-plus"></span>
+                                        <div class="rollover">
+
+                                            <p>Can't find a movie or TV show? Login to create it.</p>
+
+                                        </div>
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="glyph translate" data-role="tooltip"></li>
+
+                            <li><a href="https://www.themoviedb.org/login?language=en">Login</a></li>
+                            <li><a href="https://www.themoviedb.org/account/signup?language=en">Sign Up</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+            <div class="search_bar">
+                <section class="search">
+                    <div class="sub_media">
+                        <form id="search_form" action="https://www.themoviedb.org/search?language=en" method="get" accept-charset="utf-8">
+
+                            <input type="hidden" name="language" value="en-US">
+
+                            <span tabindex="-1" role="presentation" class="k-widget k-autocomplete k-header k-autocomplete-clearable k-state-default" style=""><input dir="auto" id="search_v4" name="query" type="text" tabindex="2" autocorrect="off" autofill="off" autocomplete="off" spellcheck="false" placeholder="Search for a movie, tv show, person..." value="" data-role="autocomplete" class="k-input" role="textbox" aria-haspopup="true" aria-disabled="false" aria-readonly="false" aria-owns="search_v4_listbox" aria-autocomplete="list" style="width: 100%;"><span unselectable="on" class="k-icon k-clear-value k-i-close k-hidden" title="clear" role="button" tabindex="-1"></span>
+                            <span class="k-icon k-i-loading" style="display:none"></span>
+                            </span>
+                            <input type="submit">
+                        </form>
+                    </div>
+                </section>
+            </div>
+            <div class="k-list-container k-popup k-group k-reset" id="search_v4-list" data-role="popup" aria-hidden="true" style="display: none; position: absolute;">
+                <div class="k-group-header" style="display:none"></div>
+                <div class="k-list-scroller" unselectable="on">
+                    <ul unselectable="on" class="k-list k-reset" tabindex="-1" aria-hidden="true" id="search_v4_listbox" aria-live="polite" data-role="staticlist" role="listbox"></ul>
+                </div>
+                <div class="k-nodata" style="display:none">
+                    <div></div>
+                </div>
+            </div>
+        </header>
+        <main id="main" class="">
+            <div class="media">
+                <h2 class="title">Popular Movies</h2>
+
+                <div class="filter_wrapper right">
+
+                    <ul>
+                        <li>
+                            <span class="glyphicons glyphicons-chevron-down"></span> Filter
+                            <ul class="inner_menu">
+                                <li>
+                                    <div class="inner_menu_title">
+                                        <h4 class="left">Country</h4>
+                                        <span class="right"><a href="https://www.themoviedb.org/movie?language=en#" class="change_country small">Change?</a></span>
+                                        <div class="clear"></div>
+                                    </div>
+                                    <p class="selected_country"><img width="24" height="24" src="./Popular Movies — The Movie Database (TMDb)_files/US.png" srcset="https://www.themoviedb.org/assets/static_cache/ca3eeab9f0484bcc27aca3d6e022d71d/images/flags_v2/24/US.png 1x, https://www.themoviedb.org/assets/static_cache/24c80f7bbddcf941dec5a41dba82822d/images/flags_v2/48/US.png 2x, https://www.themoviedb.org/assets/static_cache/5566dea3b847d771b50094756904bc6a/images/flags_v2/64/US.png 3x">                                        United States of America</p>
+                                    <p class="select_country"><span title="" class="k-widget k-dropdown k-header" unselectable="on" role="listbox" aria-haspopup="true" aria-expanded="false" tabindex="0" aria-owns="choose_country_listbox" aria-disabled="false" aria-busy="false"
+                                            aria-activedescendant="244cf875-156a-46d4-b24b-a316a0b0d2dc" style="display: none;"><span unselectable="on" class="k-dropdown-wrap k-state-default"><span unselectable="on" class="k-input">United States of America</span>
+                                        <span unselectable="on" class="k-select" aria-label="select"><span class="k-icon k-i-arrow-60-down"></span></span>
+                                        </span><input id="choose_country" value="US" data-role="dropdownlist" style="display: none;"></span>
+                                    </p>
+                                </li>
+
+                            </ul>
+                        </li>
+                    </ul>
+
+
+                    <ul>
+                        <li>
+                            <span class="glyphicons glyphicons-chevron-down"></span> View
+                            <ul class="inner_menu">
+                                <li><a id="mixed_compact" class="view_style" href="https://www.themoviedb.org/movie?language=en#" alt="Mixed Compact View" title="Mixed Compact View">Mixed Compact View</a></li>
+                                <li><a id="poster_card" class="view_style" href="https://www.themoviedb.org/movie?language=en#" alt="Poster Card View" title="Poster Card View">Poster Card View</a></li>
+                                <li><a id="backdrop_card" class="view_style" href="https://www.themoviedb.org/movie?language=en#" alt="Backdrop Card View" title="Backdrop Card View">Backdrop Card View</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+
+                </div>
+                <div class="clear"></div>
+
+                <div class="results flex results_poster_card">
+
+                    <section data-outlet="movies" id="nnamdi"></section>
+
+                    <div class="pagination">
+                        <p class="left">Currently on page: 1 of 993 <span class="total_results grey">(19,853 results)</span></p>
+
+                        <p class="right pagination"><a href="https://www.themoviedb.org/movie?page=2&amp;language=en"><span class="glyphicons glyphicons-circle-arrow-right x1"></span></a></p>
+
+                    </div>
+                    --
+                </div>
+
+            </div>
+        </main>
+
+    </div>
+    <!-- page_wrap opened in html_head -->
+
+    <style>
+        footer {
+            background-image: url('/static_cache/v4/footers_v2/MadMaxFuryRoad-9f17bec5f89e26e60ad1e3af8ae17ea7a2e6921e005477046046da2fab832ce8.jpg');
+        }
+    </style>
+
+    <footer class="single_column movie  lazyload">
+        <nav>
+            <div class="join">
+                <img src="./Popular Movies — The Movie Database (TMDb)_files/primary-green-d70eebe18a5eb5b166d5c1ef0796715b8d1a2cbc698f96d311d62f894ae87085.svg" width="130" height="116">
+
+
+                <a class="rounded" href="https://www.themoviedb.org/account/signup?language=en">Join the Community</a>
+
+            </div>
+
+            <div>
+                <h3>The Basics</h3>
+                <ul>
+                    <li><a href="https://www.themoviedb.org/about?language=en">About TMDb</a></li>
+                    <li><a href="https://www.themoviedb.org/about/staying-in-touch?language=en">Contact Us</a></li>
+                    <li><a href="https://www.themoviedb.org/talk?language=en">Support Forums</a></li>
+                    <li><a href="https://www.themoviedb.org/documentation/api?language=en">API</a></li>
+                    <li><a href="https://blog.themoviedb.org/" target="_blank" rel="noopener">Blog</a></li>
+                    <li><a href="https://www.themoviedb.org/documentation/editing?language=en">Help</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Get Involved</h3>
+                <ul>
+                    <li><a href="https://www.themoviedb.org/apps?language=en">3rd Party Applications</a></li>
+                    <li><a href="https://www.themoviedb.org/movie/new?language=en">Add New Movie</a></li>
+                    <li><a href="https://www.themoviedb.org/tv/new?language=en">Add New TV Show</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Community</h3>
+                <ul>
+                    <li><a href="https://www.themoviedb.org/documentation/community/guidelines?language=en">Guidelines</a></li>
+                    <li><a href="https://www.themoviedb.org/leaderboard?language=en">Leaderboard</a></li>
+                    <li><a href="https://www.themoviedb.org/discuss?language=en">Forums</a></li>
+                    <li><a href="https://twitter.com/themoviedb" target="_blank" rel="noopener">Twitter</a></li>
+                    <li><a href="https://www.facebook.com/themoviedb" target="_blank" rel="noopener">Facebook</a></li>
+                    <li><a href="https://plus.google.com/+TheMovieDBorgTMDb" target="_blank" rel="noopener">Google+</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="https://www.themoviedb.org/documentation/website/terms-of-use?language=en">Terms of Use</a></li>
+                    <li><a href="https://www.themoviedb.org/privacy-policy?language=en">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </nav>
+    </footer>
+
+    <div id="settings_tooltip" class="hide">
+        <div class="settings_content">
+            <div class="group no_pad">
+                <p><a href="https://www.themoviedb.org/login">Login</a></p>
+            </div>
+            <div class="group">
+                <p><a href="https://www.themoviedb.org/account/signup">Sign Up</a></p>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="./Popular Movies — The Movie Database (TMDb)_files/footer-b61e35c792700bccd62efeadf4beec3343c17c5dedc72ce8155829dd688d0862.js.download"></script>
+
+    <script src="./Popular Movies — The Movie Database (TMDb)_files/jquery.timeago.en-US-f9d144e55407ca11f35de7a0d44b0d54ec1ffc6c4039dffd5a11c0a12e6a9482.js.download"></script>
+
+
+    <script src="./Popular Movies — The Movie Database (TMDb)_files/kendo.culture.en-US.min-bfdcc6fa28dd9e9b34d3314c6a1555b2f32a33ddee14484a34d2c16a42d826bc.js.download"></script>
+
+</div>
